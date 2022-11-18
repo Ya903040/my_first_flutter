@@ -10,6 +10,8 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageFirstStage();
 }
 
+
+
 class _MyHomePageFirstStage extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -19,29 +21,77 @@ class _MyHomePageFirstStage extends State<MyHomePage> {
         title: Text(widget.title),
         backgroundColor: Colors.lightGreen,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'who are you ? warrior',
-              style: TextStyle(fontSize: 40),
-              textAlign: TextAlign.center,
-            ),
-            Text(
-              'Frank ?',
-              style: TextStyle(fontSize: 35),
-            ),
-          ],
-        ),
+      body: Wrap(
+        children: <Widget>[
+          Container(
+              color: Colors.blue,
+              width: 150,
+              height: 150,
+              child: const Center(
+                  child: Text(
+                "who",
+                textScaleFactor: 2.5,
+              ))),
+          Container(
+              color: Colors.red,
+              width: 150,
+              height: 150,
+              child: const Center(
+                  child: Text(
+                "are",
+                textScaleFactor: 2.5,
+              ))),
+          Container(
+              color: Colors.teal,
+              width: 150,
+              height: 150,
+              child: const Center(
+                  child: Text(
+                "you",
+                textScaleFactor: 2.5,
+              ))),
+          Container(
+              color: Colors.indigo,
+              width: 150,
+              height: 150,
+              child: const Center(
+                  child: Text(
+                "?",
+                textScaleFactor: 2.5,
+              ))),
+          Container(
+              color: Colors.orange,
+              width: 150,
+              height: 150,
+              child: const Center(
+                  child: Text(
+                "warrior",
+                textScaleFactor: 2.5,
+              ))),
+          Container(
+              color: Colors.lightGreen,
+              width: 150,
+              height: 150,
+              child: const Center(
+                  child: Text(
+                    "Frank?",
+                    textScaleFactor: 2.5,
+                  ))),
+
+
+
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/');
         },
         backgroundColor: Colors.deepOrange,
-        child: const Icon(Icons.exit_to_app_rounded),
+        child: const Icon(Icons.exit_to_app_rounded, size: 50),
       ),
+/*
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+*/
     );
   }
 }

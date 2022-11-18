@@ -1,46 +1,45 @@
-
 import 'package:flutter/material.dart';
 import 'package:test1/other/DetailsPage.dart';
 
 List<ImageDetails> _images = [
   ImageDetails(
-    imagePath: '../../assets/images/gallery/1.jpg',
+    imagePath: ('././assets/images/gallery/1.jpg'),
     title: 'PainBoll',
     details:
         'This image was taken during a party in New York on new years eve. Quite a colorful shot.',
   ),
   ImageDetails(
-    imagePath: '../../assets/images/gallery/2.jpg',
+    imagePath: '././assets/images/gallery/2.jpg',
     title: 'PainBoll',
     details:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
   ),
   ImageDetails(
-    imagePath: '../../assets/images/gallery/3.jpg',
+    imagePath: '././assets/images/gallery/3.jpg',
     title: 'PainBoll',
     details:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
   ),
   ImageDetails(
-    imagePath: '../../assets/images/gallery/4.jpg',
+    imagePath: '././assets/images/gallery/4.jpg',
     title: 'ice rink',
     details:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
   ),
   ImageDetails(
-    imagePath: '../../assets/images/gallery/5.jpg',
+    imagePath: '././assets/images/gallery/5.jpg',
     title: 'ice rink',
     details:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
   ),
   ImageDetails(
-    imagePath: '../../assets/images/gallery/6.jpg',
+    imagePath: '././assets/images/gallery/6.jpg',
     title: 'ice rink',
     details:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
   ),
   ImageDetails(
-    imagePath: '../../assets/images/gallery/7.jpg',
+    imagePath: '././assets/images/gallery/7.jpg',
     title: 'ice rink',
     details:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
@@ -53,8 +52,16 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/homepage');
+
+        },
+        child: const Icon(Icons.exit_to_app),
+      ),
       backgroundColor: Colors.deepOrange,
       body: SafeArea(
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -74,6 +81,7 @@ class ThirdPage extends StatelessWidget {
               height: 40,
             ),
             Expanded(
+
               child: Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
@@ -86,7 +94,9 @@ class ThirdPage extends StatelessWidget {
                     topRight: Radius.circular(30),
                   ),
                 ),
+
                 child: GridView.builder(
+
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     crossAxisSpacing: 10,
@@ -122,7 +132,9 @@ class ThirdPage extends StatelessWidget {
             )
           ],
         ),
+
       ),
+
     );
   }
 }

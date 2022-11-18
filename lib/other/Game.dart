@@ -34,6 +34,14 @@ class _GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     double boardWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/homepage');
+            
+          },
+          child: const Icon(Icons.exit_to_app_sharp),
+        ),
         backgroundColor: MainColor.primaryColor,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,17 +57,23 @@ class _GameScreenState extends State<GameScreen> {
             const SizedBox(
               height: 20.0,
             ),
+
             SizedBox(
+
               width: boardWidth,
               height: boardWidth,
+
               child: GridView.count(
                 crossAxisCount: Game.boardlenth ~/ 3,
                 padding: const EdgeInsets.all(16.0),
                 mainAxisSpacing: 8.0,
                 crossAxisSpacing: 8.0,
                 children: List.generate(Game.boardlenth, (index) {
+
                   return InkWell(
+
                     onTap: gameOver
+
                         ? null
                         : () {
                             if (game.board![index] == "") {
@@ -84,6 +98,9 @@ class _GameScreenState extends State<GameScreen> {
                             }
                           },
                     child: Container(
+
+
+
                       width: Game.blocSize,
                       height: Game.blocSize,
                       decoration: BoxDecoration(
@@ -111,7 +128,7 @@ class _GameScreenState extends State<GameScreen> {
             ),
             Text(
               result,
-              style: const TextStyle(color: Colors.white, fontSize: 54.0),
+              style: const TextStyle(color: Colors.white, fontSize: 54.0),textAlign: TextAlign.center,
             ),
             ElevatedButton.icon(
               onPressed: () {

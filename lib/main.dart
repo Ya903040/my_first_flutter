@@ -28,7 +28,7 @@ class MainPage extends StatelessWidget {
         '/': (context) => const LogIn(),
         '/homepage': (context) => const MyHomePage(title: "title"),
         '/clicker': (context) =>
-            const MyFirstPage(title: 'Flutter Demo Home Page'),
+            const MyFirstPage(title: 'clean'),
         '/silver_grid': (context) => const SecondPage(),
         '/third': (context) => const ThirdPage(),
         '/game': (context) => const GameScreen(),
